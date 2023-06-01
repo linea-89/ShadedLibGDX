@@ -18,6 +18,6 @@ jobs:
       env:
         SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
         SECRET_USER_TOKEN: ${{ secrets.SECRET_USER_TOKEN }}
-        DISTRIBUTION: ${{ inputs.distribution }}
+        DISTRIBUTION: ${{ github.event.inputs.distribution }}
       run: mvn deploy    
       
